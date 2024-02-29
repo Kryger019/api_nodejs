@@ -1,0 +1,30 @@
+{
+  "name": "api_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kryger019/api_nodejs.git"
+  },
+  "keywords": ["API", "NodeJS", "MySQL"],
+  "author": "Felipe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kryger019/api_nodejs/issues"
+  },
+  "homepage": "https://github.com/Kryger019/api_nodejs#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "mysql2": "^3.9.2"
+    },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
