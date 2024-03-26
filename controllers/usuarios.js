@@ -4,6 +4,7 @@ const db = require('../database/connection');
 module.exports = {
     async listarUsuarios(request, response) {
         try {
+            // throw new Error('Eu causei o erro!');
             return response.status(200).json({
                 sucesso: true, 
                 mensagem: 'Lista de usuários.', 
@@ -12,12 +13,11 @@ module.exports = {
         } catch (error) {
             return response.status(500).json({
                 sucesso: false, 
-                mensagem: `Erro na requisição. \n ${error}`, 
+                mensagem: `Erro na requisição. -${error}`, 
                 dados: null
             });
         }
-    },
-
+    }, 
     async cadastrarUsuarios(request, response) {
         try {
             return response.status(200).json({
@@ -28,12 +28,11 @@ module.exports = {
         } catch (error) {
             return response.status(500).json({
                 sucesso: false, 
-                mensagem: `Erro na requisição. \n ${error}`, 
+                mensagem: `Erro na requisição. -${error}`, 
                 dados: null
             });
         }
-    },
-
+    }, 
     async editarUsuarios(request, response) {
         try {
             return response.status(200).json({
@@ -44,12 +43,11 @@ module.exports = {
         } catch (error) {
             return response.status(500).json({
                 sucesso: false, 
-                mensagem: `Erro na requisição. \n ${error}`, 
+                mensagem: `Erro na requisição. -${error}`, 
                 dados: null
             });
         }
-    },
-
+    }, 
     async apagarUsuarios(request, response) {
         try {
             return response.status(200).json({
@@ -60,10 +58,10 @@ module.exports = {
         } catch (error) {
             return response.status(500).json({
                 sucesso: false, 
-                mensagem: `Erro na requisição. \n ${error}`, 
+                mensagem: `Erro na requisição. -${error}`, 
                 dados: null
             });
         }
-    },
+    }, 
 }
 
