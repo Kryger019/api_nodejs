@@ -86,9 +86,11 @@ module.exports = {
                 dados: error.message
             });
         }
-    },  
+    }, 
     async apagarUsuarios(request, response) {
         try {
+            const { usu_id } = request.params;
+            
             return response.status(200).json({
                 sucesso: true, 
                 mensagem: 'Apagar usuários.', 
