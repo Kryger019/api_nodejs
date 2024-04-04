@@ -18,7 +18,10 @@ const ProdutoTiposController = require('../controllers/produtoTipos');
 router.get('/usuarios', UsuariosController.listarUsuarios); 
 router.post('/usuarios', UsuariosController.cadastrarUsuarios); 
 router.patch('/usuarios/:usu_id', UsuariosController.editarUsuarios); 
-router.delete('/usuarios/:usu_id', UsuariosController.apagarUsuarios); 
+router.delete('/usuarios/:usu_id', UsuariosController.apagarUsuarios);
+router.delete('/usuarios/del/:usu_id', UsuariosController.apagarUsuarios);
+router.post('/usuarios/login', UsuariosController.login);
+ 
 
 router.get('/produtos', ProdutosController.listarProdutos); 
 router.post('/produtos', ProdutosController.cadastrarProdutos); 
