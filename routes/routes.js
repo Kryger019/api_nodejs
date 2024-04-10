@@ -38,10 +38,11 @@ router.patch('/clientes', ClientesController.editarClientes);
  
 router.get('/cidades', CidadesController.listarCidades); 
 
-router.get('/enderecoclientes', EnderecoClientesController.listarEnderecoClientes); 
-router.post('/enderecoclientes', EnderecoClientesController.cadastrarEnderecoClientes); 
-router.patch('/enderecoclientes', EnderecoClientesController.editarEnderecoClientes); 
-router.delete('/enderecoclientes', EnderecoClientesController.apagarEnderecoClientes); 
+router.get('/enderecoClientes', EnderecoClientesController.listarEndCliente); 
+router.post('/enderecoClientes', EnderecoClientesController.cadastrareEndCliente); //body
+router.patch('/enderecoClientes/:end_id', EnderecoClientesController.editarEndCliente); // params (URL) e body
+router.delete('/enderecoClientes/:end_id', EnderecoClientesController.apagarEndCliente); // params (URL)
+router.delete('/enderecoClientes/del/:end_id', EnderecoClientesController.ocultarEndCliente); // params (URL)  
 
 router.get('/mesas', MesasController.listarMesas); 
 router.post('/mesas', MesasController.cadastrarMesas); 
